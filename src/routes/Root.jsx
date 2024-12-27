@@ -1,3 +1,5 @@
+import laptopMobileImage from '../assets/LapTopAndMobile.png'
+
 export default function Root() {
     return (
         <>
@@ -34,7 +36,7 @@ export default function Root() {
                         {/* Image - adjusted container and sizing */}
                         <div className="lg:flex-1 lg:w-7/12">
                             <img 
-                                src="/LapTopAndMobile.png" 
+                                src={laptopMobileImage} 
                                 alt="Laptop and mobile device mockup" 
                                 className="w-full max-w-2xl mx-auto lg:max-w-none lg:w-[115%]"
                             />
