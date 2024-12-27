@@ -21,7 +21,7 @@ const Layout = () => {
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/wilmoth-technology-services-ui/",
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
