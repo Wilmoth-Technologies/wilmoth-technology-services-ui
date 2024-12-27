@@ -1,6 +1,6 @@
 import laptopMobileImage from '/LapTopAndMobile.png'
 // Import icons for services
-import { FaRocket, FaChartLine, FaGoogle, FaFlagUsa, FaHourglassHalf, FaStar } from 'react-icons/fa'
+import { FaRocket, FaChartLine, FaGoogle, FaFlagUsa, FaHourglassHalf, FaStar, FaClock, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import { MdDevices } from "react-icons/md";
 import { CiMobile3 } from "react-icons/ci";
 
@@ -75,10 +75,10 @@ export default function Root() {
                             </p>
                             {/* Button container - always in row */}
                             <div className="flex flex-row gap-4 justify-center lg:justify-start">
-                                <button className="bg-black text-white px-8 py-3 rounded-full font-bold hover:bg-gray-800 transition-colors">
+                                <button className="bg-chartreuse text-olive-dark px-8 py-3 rounded-full font-bold hover:bg-gray-800 transition-colors">
                                     GET STARTED
                                 </button>
-                                <button className="bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors">
+                                <button className="bg-white text-olive-dark px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors">
                                     ABOUT US
                                 </button>
                             </div>
@@ -157,99 +157,51 @@ export default function Root() {
             </div>
 
             {/* Portfolio Section */}
-            <div className='bg-gray-100 mt-6'>
+            <div className='bg-gray-100 mt-6 pb-6'>
             <div className="container mx-auto px-4 py-4">
                 {/* Header */}
-                <div className="mb-16">
+                <div className="mb-3">
                     <p className="text-gray-600 text-xl uppercase tracking-widest font-semibold">PORTFOLIO</p>
                     <div className="flex flex-col lg:flex-row justify-between gap-8">
                         <h2 className="text-4xl lg:text-5xl font-extrabold max-w-2xl">
                             SOME OF THE WORK WE'VE DONE OVER THE YEARS
                         </h2>
                         <p className="text-gray-700 lg:max-w-xl border-l-2 border-olive-green pl-4">
-                            We have worked with clients all over the US and Canada for home services contractors, restaurants, consulting agencies, start ups, dermatologists, doctors, accountants, and more. No matter what your business is, we can build a website that is effective, beautiful, performant, and tailored to your industry.
+                            We have partnered with diverse businesses across the US, delivering custom web applications, IoT solutions, and intelligent integrations. We specialize in creating technology solutions that streamline operations and drive efficiency. Our expertise spans industries, ensuring each solution is perfectly tailored to your specific business needs and workflow requirements.
                         </p>
                     </div>
                 </div>
 
                 {/* Portfolio Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                    {/* Valley Construction Supply */}
-                    <div className="flex flex-col gap-6">
+                <div className="flex justify-center">
+                    {/* Mayberry Mini Trucks */}
+                    <div className="flex flex-col gap-3 max-w-lg">
                         <div className="relative">
                             <img 
-                                src="/valley-construction.png" 
-                                alt="Valley Construction Supply website" 
+                                src="/MayberryMiniTrucksPortfolio.png" 
+                                alt="Mayberry Mini Trucks website" 
                                 className="w-full rounded-lg"
                             />
                         </div>
                         <div>
-                            <h3 className="text-2xl font-bold mb-4">VALLEY CONSTRUCTION SUPPLY</h3>
+                            <h3 className="text-2xl font-bold mb-2">MAYBERRY MINI TRUCKS</h3>
                             <p className="text-gray-700 mb-6">
-                                Valley Construction Supply is the largest privately held construction supply company in Seattle, WA for over 35 years and has been a happy client for over 5 years.
+                                Mayberry Mini Trucks started as a small family-owned business in 2010. Through the years of growth, we are still just as passionate about providing quality, cost effective mini trucks for our customers. We take pride in providing our customers with top notch service as we bring them through the process of finding their mini truck with ease, so they can have the best experience possible.
                             </p>
-                            <a 
-                                href="https://valleyconstructionsupply.com" 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
-                                className="bg-olive-green text-white px-8 py-3 rounded-full inline-block font-bold hover:bg-opacity-90 transition-colors"
-                            >
-                                VISIT WEBSITE
-                            </a>
+                            <div className="flex justify-center">
+                                <a 
+                                    href="https://mayberryminitrucks.com/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="bg-olive-green text-white px-8 py-3 rounded-full inline-block font-bold hover:bg-opacity-90 transition-colors"
+                                >
+                                    VISIT WEBSITE
+                                </a>
+                            </div>
                         </div>
-                    </div>
-
-                    {/* Dr. Victoria Chan */}
-                    <div className="flex flex-col gap-6">
-                        <div className="relative">
-                            <img 
-                                src="/dr-victoria.png" 
-                                alt="Dr. Victoria Chan website" 
-                                className="w-full rounded-lg"
-                            />
-                        </div>
-                        <div>
-                            <h3 className="text-2xl font-bold mb-4">DR. VICTORIA CHAN</h3>
-                            <p className="text-gray-700 mb-6">
-                                Dr. Victoria Chan is a Naturopathic Doctor based in California who offers a holistic approach to mental health. This was a VERY custom design that came out amazing.
-                            </p>
-                            <a 
-                                href="https://drvictoriachan.com" 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
-                                className="bg-olive-green text-white px-8 py-3 rounded-full inline-block font-bold hover:bg-opacity-90 transition-colors"
-                            >
-                                VISIT WEBSITE
-                            </a>
-                        </div>
-                    </div>
-
-                    {/* Casablanca Bakery */}
-                    <div className="flex flex-col gap-6">
-                        <div className="relative">
-                            <img 
-                                src="/casablanca.png" 
-                                alt="Casablanca Bakery website" 
-                                className="w-full rounded-lg"
-                            />
-                        </div>
-                        <div>
-                            <h3 className="text-2xl font-bold mb-4">CASABLANCA BAKERY</h3>
-                            <p className="text-gray-700 mb-6">
-                                For Casablanca, we had a much larger scope of work where we built them a fully editable menu with a custom CMS to edit it, and a multi-language toggle.
-                            </p>
-                            <a 
-                                href="https://casablancabakery.com" 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
-                                className="bg-olive-green text-white px-8 py-3 rounded-full inline-block font-bold hover:bg-opacity-90 transition-colors"
-                            >
-                                VISIT WEBSITE
-                            </a>
-                        </div>
-                    </div>
                     </div>
                 </div>
+            </div>
             </div>
 
             {/* Performance Section */}
@@ -278,8 +230,8 @@ export default function Root() {
                                         <p className="text-lg">Page Speed Scores</p>
                                     </div>
                                     <div className="text-center">
-                                        <p className="text-chartreuse text-6xl font-bold mb-2">5/5</p>
-                                        <p className="text-lg">Google Reviews</p>
+                                        <p className="text-chartreuse text-6xl font-bold mb-2">&lt;1s</p>
+                                        <p className="text-lg">Response Times</p>
                                     </div>
                                 </div>
                             </div>
@@ -329,12 +281,14 @@ export default function Root() {
                                 </div>
                             </div>
 
-                            <a 
-                                href="/contact" 
-                                className="bg-chartreuse text-olive-dark px-8 py-4 rounded-full inline-block font-bold mt-8 hover:bg-citrus transition-colors"
-                            >
-                                GET STARTED TODAY
-                            </a>
+                            <div className="flex justify-center">
+                                <a 
+                                    href="/contact" 
+                                    className="bg-chartreuse text-olive-dark px-8 py-4 rounded-full inline-block font-bold mt-8 hover:bg-citrus transition-colors"
+                                >
+                                    GET STARTED TODAY
+                                </a>
+                            </div>
                         </div>
 
                         {/* Right Content */}
@@ -342,21 +296,21 @@ export default function Root() {
                             {/* Mobile-only Stats */}
                             <div className="lg:hidden grid grid-cols-3 gap-8 mb-8">
                                 <div className="text-center">
-                                    <p className="text-chartreuse text-6xl font-bold mb-2">100%</p>
+                                    <p className="text-chartreuse text-4xl font-bold mb-2">100%</p>
                                     <p className="text-lg">Satisfaction Guaranteed</p>
                                 </div>
                                 <div className="text-center">
-                                    <p className="text-chartreuse text-6xl font-bold mb-2">100</p>
+                                    <p className="text-chartreuse text-4xl font-bold mb-2">100</p>
                                     <p className="text-lg">Page Speed Scores</p>
                                 </div>
                                 <div className="text-center">
-                                    <p className="text-chartreuse text-6xl font-bold mb-2">5/5</p>
+                                    <p className="text-chartreuse text-4xl font-bold mb-2">5/5</p>
                                     <p className="text-lg">Google Reviews</p>
                                 </div>
                             </div>
 
                             {/* Image */}
-                            <div className="flex items-center">
+                            <div className="flex items-center lg:-mt-12">
                                 <img 
                                     src="/GooglePageSpeed.avif" 
                                     alt="Google PageSpeed Insights showing perfect scores" 
@@ -441,10 +395,10 @@ export default function Root() {
                 {/* Billboard structure with shadow - flipped */}
                 <div className="relative max-w-[1200px] mx-auto mb-20" style={{ transform: 'rotate(180deg)' }}>
                     {/* Left post */}
-                    <div className="absolute left-0 -top-20 h-[calc(100%+80px)] w-1 bg-olive-green"></div>
+                    <div className="absolute left-0 -top-48 h-[calc(100%+80px)] w-6 bg-olive-green"></div>
                     
                     {/* Right post */}
-                    <div className="absolute right-0 -top-20 h-[calc(100%+80px)] w-1 bg-olive-green"></div>
+                    <div className="absolute right-0 -top-48 h-[calc(100%+80px)] w-6 bg-olive-green"></div>
                     
                     {/* Main content with shadow */}
                     <div className="bg-olive-green text-white py-16 px-4 shadow-2xl rounded-sm">
@@ -452,12 +406,12 @@ export default function Root() {
                         <div className="max-w-6xl mx-auto" style={{ transform: 'rotate(180deg)' }}>
                             <div className="flex flex-col lg:flex-row justify-between items-center">
                                 <h2 className="text-4xl lg:text-5xl font-bold mb-8 lg:mb-0">
-                                    READY TO GET THE SITE<br />
+                                    READY TO BUILD THE SOLUTION<br />
                                     YOU ALWAYS WANTED?
                                 </h2>
                                 <a 
                                     href="/contact" 
-                                    className="bg-sky-400 text-white px-8 py-3 rounded-full font-bold hover:bg-sky-500 transition-colors"
+                                    className="bg-chartreuse text-olive-dark px-8 py-3 rounded-full font-bold hover:bg-sky-500 transition-colors"
                                 >
                                     GET STARTED TODAY
                                 </a>
@@ -538,15 +492,19 @@ export default function Root() {
                             <h3 className="text-xl font-bold mb-6">CONTACT INFORMATION</h3>
                             <ul className="space-y-4">
                                 <li className="flex items-center gap-2">
+                                    <FaClock className="w-4 h-4 text-gray-300" />
                                     <span className="text-gray-300">24/7</span>
                                 </li>
                                 <li className="flex items-center gap-2">
-                                    <a href="tel:+12195762539" className="hover:text-gray-300">(219) 576-2539</a>
+                                    <FaPhone className="w-4 h-4 text-gray-300" />
+                                    <a href="tel:+3362446595" className="hover:text-gray-300">(336) 244-6595</a>
                                 </li>
                                 <li className="flex items-center gap-2">
-                                    <a href="mailto:ohwdinfo@gmail.com" className="hover:text-gray-300">ohwdinfo@gmail.com</a>
+                                    <FaEnvelope className="w-4 h-4 text-gray-300" />
+                                    <a href="mailto:gabewilmoth@gmail.com" className="hover:text-gray-300">gabewilmoth@gmail.com</a>
                                 </li>
                                 <li className="flex items-center gap-2">
+                                    <FaMapMarkerAlt className="w-4 h-4 text-gray-300" />
                                     <span className="text-gray-300">United States</span>
                                 </li>
                             </ul>
