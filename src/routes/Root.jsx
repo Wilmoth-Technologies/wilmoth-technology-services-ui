@@ -1,4 +1,4 @@
-import laptopMobileImage from '../assets/LapTopAndMobile.png'
+import laptopMobileImage from '/LapTopAndMobile.png'
 
 export default function Root() {
     return (
