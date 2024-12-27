@@ -1,5 +1,5 @@
 {
-  "homepage": "https://GabeWilmoth.github.io/wilmoth-technology-services-ui",
+  "homepage": "https://wilmothtechnologyservices.com",
   "name": "wilmoth-technology-services-ui",
   "private": true,
   "version": "0.0.0",
@@ -7,9 +7,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist" 
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@headlessui/react": "^2.1.10",

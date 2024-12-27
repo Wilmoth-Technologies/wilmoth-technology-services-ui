@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/wilmoth-technology-services-ui/",
   plugins: [react()],
+  base: '/',
   preview: {
     port: 3000,
     strictPort: true,
