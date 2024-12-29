@@ -19,13 +19,20 @@ export default function NavBar() {
     const handleSectionNavigation = (sectionId, path) => (e) => {
         e.preventDefault();
         
-        // If we're not on the home page, navigate first
-        if (window.location.pathname !== '/') {
-            window.location.href = `/${path}#${sectionId}`;
+        // Special case for home section when on contact page
+        if (window.location.hash === '#/contact') {
+            window.location.href = '/';
+            window.location.hash = '';  // Clear the hash
             return;
         }
 
-        // If we're already on the home page, just scroll
+        // If we're not on the home page, redirect to home with hash
+        if (window.location.pathname !== '/') {
+            window.location.href = `/#${sectionId}`;
+            return;
+        }
+
+        // If we're on the home page, scroll to section
         const section = document.getElementById(sectionId);
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' });

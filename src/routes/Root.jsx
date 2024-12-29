@@ -13,7 +13,7 @@ export default function Root() {
             title: "MOBILE FIRST DESIGN",
             description: "We prioritize the mobile experience first, ensuring your website looks and works beautifully on phones and tablets. This means your visitors get fast, smooth performance whether they're on the go or at their desk.",
             link: "Get Started",
-            href: "/contact"
+            href: "/#/contact"
         },
         {
             icon: <FaRocket className="w-12 h-12" />,
@@ -41,14 +41,14 @@ export default function Root() {
             title: "CROSS-PLATFORM SOLUTIONS",
             description: "We develop solutions that work across all platforms - from web and mobile applications to IoT devices and custom integrations. Our technology stack ensures consistent performance across your entire digital ecosystem.",
             link: "Get Started",
-            href: "/contact"
+            href: "/#/contact"
         },
         {
             icon: <FaClock className="w-12 h-12" />,
             title: "24/7 SUPPORT & MONITORING",
             description: "We provide round-the-clock monitoring and support for your digital infrastructure. Our dedicated team ensures your systems run smoothly, responding quickly to any issues and maintaining peak performance.",
             link: "Get Started",
-            href: "/contact"
+            href: "/#/contact"
         }
     ];
 
@@ -76,7 +76,7 @@ export default function Root() {
                             {/* Button container - always in row */}
                             <div className="flex flex-row gap-4 justify-center lg:justify-start">
                                 <a 
-                                    href="/contact" 
+                                    href="#/contact" 
                                     className="bg-chartreuse text-olive-dark px-8 py-3 rounded-full font-bold hover:bg-chartreuse hover:opacity-70 transition-colors"
                                 >
                                     GET STARTED
@@ -148,6 +148,10 @@ export default function Root() {
                                                 if (service.href.startsWith('#')) {
                                                     e.preventDefault();
                                                     document.querySelector(service.href).scrollIntoView({ behavior: 'smooth' });
+                                                } else if (service.href.includes('contact')) {
+                                                    e.preventDefault();
+                                                    window.location.href = service.href;
+                                                    window.scrollTo(0, 0);
                                                 }
                                             }}
                                         >
@@ -162,8 +166,9 @@ export default function Root() {
                     {/* Call Us Today Button */}
                     <div className="flex justify-center mt-12">
                         <a 
-                            href="/contact" 
+                            href="#/contact" 
                             className="bg-olive-green text-white px-12 py-4 rounded-full font-bold hover:bg-opacity-90 transition-colors"
+                            onClick={() => window.scrollTo(0, 0)}
                         >
                             CALL US TODAY
                         </a>
@@ -308,8 +313,13 @@ export default function Root() {
 
                             <div className="flex justify-center">
                                 <a 
-                                    href="/contact" 
+                                    href="#/contact" 
                                     className="bg-chartreuse text-olive-dark px-8 py-4 rounded-full inline-block font-bold mt-8 hover:bg-chartreuse hover:opacity-70 transition-colors"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        window.location.href = '#/contact';
+                                        window.scrollTo(0, 0);
+                                    }}
                                 >
                                     GET STARTED TODAY
                                 </a>

@@ -23,7 +23,8 @@ export default function Footer() {
                                     YOU ALWAYS WANTED?
                                 </h2>
                                 <a 
-                                    href="/contact" 
+                                    href="/#/contact" 
+                                    onClick={() => window.scrollTo(0, 0)}
                                     className="bg-chartreuse text-olive-dark px-8 py-3 rounded-full font-bold hover:bg-chartreuse hover:opacity-70 transition-colors"
                                 >
                                     GET STARTED TODAY
@@ -72,7 +73,8 @@ export default function Footer() {
                             </p>
                             <div className="text-center">
                                 <a 
-                                    href="/contact" 
+                                    href="/#/contact" 
+                                    onClick={() => window.scrollTo(0, 0)}
                                     className="bg-chartreuse text-olive-dark px-8 py-3 rounded-full font-bold hover:bg-chartreuse hover:opacity-70 transition-colors inline-block"
                                 >
                                     GET STARTED TODAY
@@ -84,8 +86,24 @@ export default function Footer() {
                         <div className="lg:col-span-2">
                             <h3 className="text-2xl font-bold mb-6 text-center">QUICK LINKS</h3>
                             <ul className="space-y-4 text-center">
-                                <li><a href="/" className="hover:text-chartreuse">Home</a></li>
-                                <li><a href="/contact" className="hover:text-chartreuse">Contact Us</a></li>
+                                <li>
+                                    <a 
+                                        href="/" 
+                                        onClick={() => window.scrollTo(0, 0)} 
+                                        className="hover:text-chartreuse"
+                                    >
+                                        Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <a 
+                                        href="/#/contact" 
+                                        onClick={() => window.scrollTo(0, 0)} 
+                                        className="hover:text-chartreuse"
+                                    >
+                                        Contact Us
+                                    </a>
+                                </li>
                             </ul>
                         </div>
 
