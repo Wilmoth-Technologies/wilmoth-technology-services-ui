@@ -1,7 +1,11 @@
 export default function Logo() {
     return (
-        <div className="text-xl font-bold">
-            WTS
+        <div>
+            <img 
+                src="/WTSLogo.png" 
+                alt="WTS Logo" 
+                className="h-8"
+            />
         </div>
     );
 } 

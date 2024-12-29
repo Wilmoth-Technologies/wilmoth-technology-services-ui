@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
 import Root from "./routes/Root.jsx";
+import Contact from "./routes/Contact.jsx";
 import ErrorPage from './shared/components/ErrorPage.jsx';
 import NavBar from './shared/components/NavBar.jsx';
 import Footer from './shared/components/Footer.jsx';
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Root />
+      },
+      {
+        path: "/contact",
+        element: <Contact />
       },
       // Add more routes here as needed
     ]

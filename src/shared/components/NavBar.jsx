@@ -16,12 +16,29 @@ export default function NavBar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const handleSectionNavigation = (sectionId, path) => (e) => {
+        e.preventDefault();
+        
+        // If we're not on the home page, navigate first
+        if (window.location.pathname !== '/') {
+            window.location.href = `/${path}#${sectionId}`;
+            return;
+        }
+
+        // If we're already on the home page, just scroll
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+        setIsMenuOpen(false);
+    };
+
     const navLinks = [
-        { name: 'HOME', path: '/' },
-        { name: 'ABOUT US', path: '/about' },
-        { name: 'SERVICES', path: '/services' },
-        { name: 'PORTFOLIO', path: '/portfolio' },
-        { name: 'CONTACT', path: '/contact' }
+        { name: 'HOME', path: '', onClick: handleSectionNavigation('home-section', '') },
+        { name: 'SERVICES', path: '', onClick: handleSectionNavigation('services-section', '') },
+        { name: 'PORTFOLIO', path: '', onClick: handleSectionNavigation('portfolio-section', '') },
+        { name: 'TESTIMONIALS', path: '', onClick: handleSectionNavigation('testimonials-section', '') },
+        { name: 'CONTACT', path: 'contact' }
     ];
 
     return (
@@ -29,7 +46,9 @@ export default function NavBar() {
             <nav className={`bg-white w-full ${hasScrolled ? '' : 'rounded-xl'}`}>
                 <div className="container mx-auto px-4 py-4">
                     <div className="flex justify-between items-center">
-                        <Logo />
+                        <Link to="/" onClick={handleSectionNavigation('home-section', '')}>
+                            <Logo />
+                        </Link>
                         
                         {/* Desktop Menu */}
                         <div className="hidden lg:flex space-x-8">
@@ -38,6 +57,7 @@ export default function NavBar() {
                                     key={link.name}
                                     to={link.path}
                                     className="hover:text-olive-green font-bold transition-colors"
+                                    onClick={link.onClick || (() => setIsMenuOpen(false))}
                                 >
                                     {link.name}
                                 </Link>
@@ -59,7 +79,7 @@ export default function NavBar() {
                                     key={link.name}
                                     to={link.path}
                                     className="hover:text-olive-green font-bold transition-colors"
-                                    onClick={() => setIsMenuOpen(false)}
+                                    onClick={link.onClick || (() => setIsMenuOpen(false))}
                                 >
                                     {link.name}
                                 </Link>
