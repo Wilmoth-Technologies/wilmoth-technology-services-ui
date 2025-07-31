@@ -121,7 +121,7 @@ export default function Footer() {
                                 </li>
                                 <li className="flex items-center gap-2">
                                     <FaEnvelope className="w-4 h-4 text-gray-300" />
-                                    <a href="mailto:gabewilmoth@gmail.com" className="hover:text-chartreuse">gabewilmoth@gmail.com</a>
+                                    <a href="mailto:info@wilmothtechnologyservices.com" className="hover:text-chartreuse">info@wilmothtechnologyservices.com</a>
                                 </li>
                                 <li className="flex items-center gap-2">
                                     <FaMapMarkerAlt className="w-4 h-4 text-gray-300" />

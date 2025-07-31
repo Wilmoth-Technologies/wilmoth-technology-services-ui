@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Contact Request - Wilmoth Technology Services</title>
+    <style>
+        /* Reset styles for email clients */
+        body, table, td, p, a, li, blockquote {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        
+        table, td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+        
+        /* Base styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333333;
+        }
+        
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+        
+        .header {
+            background-color: #556B2F;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            color: #ffffff;
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .greeting {
+            font-size: 18px;
+            color: #333333;
+            margin-bottom: 30px;
+        }
+        
+        .request-details {
+            background-color: #f8f9fa;
+            border-left: 4px solid #556B2F;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+        
+        .detail-row {
+            margin-bottom: 15px;
+        }
+        
+        .detail-label {
+            font-weight: bold;
+            color: #556B2F;
+            display: inline-block;
+            width: 120px;
+            font-size: 14px;
+        }
+        
+        .detail-value {
+            color: #333333;
+            font-size: 14px;
+        }
+        
+        .message-box {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .message-label {
+            font-weight: bold;
+            color: #556B2F;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .message-content {
+            color: #333333;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+        
+        .footer {
+            background-color: #f8f9fa;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .footer-text {
+            color: #666666;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        
+        .contact-info {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .contact-item {
+            margin-bottom: 8px;
+            font-size: 12px;
+            color: #666666;
+        }
+        
+        .unsub {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        /* Responsive styles */
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                width: 100% !important;
+            }
+            
+            .content {
+                padding: 20px 15px !important;
+            }
+            
+            .header {
+                padding: 20px 15px !important;
+            }
+            
+            .header h1 {
+                font-size: 24px !important;
+            }
+            
+            .request-details {
+                padding: 15px !important;
+            }
+            
+            .detail-label {
+                width: 100px !important;
+                font-size: 13px !important;
+            }
+            
+            .detail-value {
+                font-size: 13px !important;
+            }
+        }
+        
+        @media only screen and (max-width: 480px) {
+            .detail-label {
+                width: 80px !important;
+                font-size: 12px !important;
+            }
+            
+            .detail-value {
+                font-size: 12px !important;
+            }
+            
+            .greeting {
+                font-size: 16px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+            <td align="center" style="background-color: #f4f4f4; padding: 20px 0;">
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" class="email-container">
+                    <!-- Header -->
+                    <tr>
+                        <td class="header">
+                            <h1>New Contact Request</h1>
+                            <p style="color: #ffffff; margin: 10px 0 0 0; font-size: 16px;">Wilmoth Technology Services</p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Content -->
+                    <tr>
+                        <td class="content">
+                            <div class="greeting">
+                                Hello,<br><br>
+                                You have received a new contact request from a potential client. Please review the details below and respond within 24 hours.
+                            </div>
+                            
+                            <div class="request-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Name:</span>
+                                    <span class="detail-value">{{first_name}} {{last_name}}</span>
+                                </div>
+                                
+                                <div class="detail-row">
+                                    <span class="detail-label">Email:</span>
+                                    <span class="detail-value">{{email}}</span>
+                                </div>
+                                
+                                <div class="detail-row">
+                                    <span class="detail-label">Phone:</span>
+                                    <span class="detail-value">{{phone_number}}</span>
+                                </div>
+                                
+                                <div class="detail-row">
+                                    <span class="detail-label">Subject:</span>
+                                    <span class="detail-value">{{subject}}</span>
+                                </div>
+                            </div>
+                            
+                            <div class="message-box">
+                                <div class="message-label">Project Details:</div>
+                                <div class="message-content">
+                                    {{description}}
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 30px; padding: 20px; background-color: #f0f8f0; border-radius: 5px; border-left: 4px solid #556B2F;">
+                                <p style="margin: 0; color: #333333; font-size: 14px;">
+                                    <strong>Next Steps:</strong><br>
+                                    • Review the project requirements<br>
+                                    • Schedule an initial consultation call<br>
+                                    • Prepare a detailed proposal<br>
+                                    • Respond within 24 hours
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                        <td class="footer">
+                            <div class="footer-text">
+                                <strong>Wilmoth Technology Services</strong><br>
+                                We transform businesses through custom web applications, websites, IoT solutions, and intelligent integrations that optimize your workflow and maximize efficiency.
+                            </div>
+                            
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    📞 <a href="tel:+13362446595" style="color: #556B2F; text-decoration: none;">(336) 244-6595</a>
+                                </div>
+                                <div class="contact-item">
+                                    📧 <a href="mailto:info@wilmothtechnologyservices.com" style="color: #556B2F; text-decoration: none;">info@wilmothtechnologyservices.com</a>
+                                </div>
+                                <div class="contact-item">
+                                    🌐 <a href="https://wilmothtechnologyservices.com" style="color: #556B2F; text-decoration: none;">wilmothtechnologyservices.com</a>
+                                </div>
+                                <div class="contact-item">
+                                    ⏰ Available 24/7 for client support
+                                </div>
+                            </div>
+
+                            <div data-role="module-unsubscribe" class="module unsub" role="module" data-type="unsubscribe" style="color:#444444; font-size:12px; line-height:20px; padding:16px 16px 16px 16px; text-align:Center;" data-muid="4e838cf3-9892-4a6d-94d6-170e474d21e5">
+        
+                                <p style="font-size:12px; line-height:20px;">
+                                  <a class="Unsubscribe--unsubscribeLink" href="{{{unsubscribe}}}" target="_blank" style="font-family:sans-serif;text-decoration:none;">
+                                    Unsubscribe
+                                  </a>
+                                  -
+                                  <a href="{{{unsubscribe_preferences}}}" target="_blank" class="Unsubscribe--unsubscribePreferences" style="font-family:sans-serif;text-decoration:none;">
+                                    Unsubscribe Preferences
+                                  </a>
+                                </p>
+                              </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

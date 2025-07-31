@@ -4,6 +4,7 @@ import './index.css'
 import { createHashRouter, RouterProvider, Outlet } from 'react-router-dom'
 import Root from "./routes/Root.jsx";
 import Contact from "./routes/Contact.jsx";
+import ContactReceived from "./routes/ContactReceived.jsx";
 import ErrorPage from './shared/components/ErrorPage.jsx';
 import NavBar from './shared/components/NavBar.jsx';
 import Footer from './shared/components/Footer.jsx';
@@ -33,6 +34,10 @@ const router = createHashRouter([
       {
         path: "contact",
         element: <Contact />
+      },
+      {
+        path: "contact-received",
+        element: <ContactReceived />
       }
     ]
   }
