@@ -9,8 +9,8 @@ export default function Contact() {
         firstName: '',
         lastName: '',
         email: '',
-        phone: '',
-        message: ''
+        phoneNumber: '',
+        description: ''
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [errors, setErrors] = useState({});
@@ -74,14 +74,14 @@ export default function Contact() {
         }
         
         // Phone validation - required
-        if (!formData.phone.trim()) {
-            newErrors.phone = 'Phone number is required';
-        } else if (!validatePhone(formData.phone)) {
-            newErrors.phone = 'Please enter a valid phone number';
+        if (!formData.phoneNumber.trim()) {
+            newErrors.phoneNumber = 'Phone number is required';
+        } else if (!validatePhone(formData.phoneNumber)) {
+            newErrors.phoneNumber = 'Please enter a valid phone number';
         }
         
-        if (!formData.message.trim()) newErrors.message = 'Message is required';
-        if (formData.message.trim().length < 10) newErrors.message = 'Message must be at least 10 characters';
+        if (!formData.description.trim()) newErrors.description = 'Message is required';
+        if (formData.description.trim().length < 10) newErrors.description = 'Message must be at least 10 characters';
         
         setErrors(newErrors);
         
@@ -229,22 +229,22 @@ export default function Contact() {
                                     )}
                                 </div>
                                 <div>
-                                    <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                                    <label htmlFor="phoneNumber" className="block text-sm font-semibold text-gray-700 mb-2">
                                         Phone Number *
                                     </label>
                                     <input
                                         type="tel"
-                                        id="phone"
-                                        name="phone"
-                                        value={formData.phone}
+                                        id="phoneNumber"
+                                        name="phoneNumber"
+                                        value={formData.phoneNumber}
                                         onChange={handleInputChange}
                                         className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-olive-green focus:border-transparent transition-colors ${
-                                            errors.phone ? 'border-red-500' : 'border-gray-300'
+                                            errors.phoneNumber ? 'border-red-500' : 'border-gray-300'
                                         }`}
                                         placeholder="Enter your phone number (e.g., 336-244-6595)"
                                     />
-                                    {errors.phone && (
-                                        <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+                                    {errors.phoneNumber && (
+                                        <p className="text-red-500 text-sm mt-1">{errors.phoneNumber}</p>
                                     )}
                                     <p className="text-gray-500 text-xs mt-1">
                                         Format: (123) 456-7890 or 123-456-7890
@@ -256,22 +256,22 @@ export default function Contact() {
 
                             {/* Message Field */}
                             <div>
-                                <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                                <label htmlFor="description" className="block text-sm font-semibold text-gray-700 mb-2">
                                     Project Details *
                                 </label>
                                 <textarea
-                                    id="message"
-                                    name="message"
-                                    value={formData.message}
+                                    id="description"
+                                    name="description"
+                                    value={formData.description}
                                     onChange={handleInputChange}
                                     rows="6"
                                     className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-olive-green focus:border-transparent transition-colors resize-none ${
-                                        errors.message ? 'border-red-500' : 'border-gray-300'
+                                        errors.description ? 'border-red-500' : 'border-gray-300'
                                     }`}
                                     placeholder="Tell us about your project requirements, timeline, and any specific needs..."
                                 />
-                                {errors.message && (
-                                    <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+                                {errors.description && (
+                                    <p className="text-red-500 text-sm mt-1">{errors.description}</p>
                                 )}
                             </div>
 
