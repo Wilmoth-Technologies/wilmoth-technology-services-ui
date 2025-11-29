@@ -19,13 +19,6 @@ export default function NavBar() {
     const handleSectionNavigation = (sectionId, path) => (e) => {
         e.preventDefault();
         
-        // Special case for home section when on contact pages
-        if (window.location.hash === '#/contact' || window.location.hash === '#/contact-received') {
-            window.location.href = '/';
-            window.location.hash = '';  // Clear the hash
-            return;
-        }
-
         // If we're not on the home page, redirect to home with hash
         if (window.location.pathname !== '/') {
             window.location.href = `/#${sectionId}`;

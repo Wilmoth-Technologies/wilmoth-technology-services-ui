@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { FaCheckCircle, FaEnvelope, FaPhone } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -10,6 +11,12 @@ export default function ContactReceived() {
 
     return (
         <div className="min-h-screen pt-24 overflow-hidden">
+            <Helmet>
+                <title>Message Sent Successfully - Wilmoth Technology Services</title>
+                <meta name="description" content="Your message has been sent successfully. Our team will review your request and get back to you within 24 hours." />
+                <meta name="robots" content="noindex, nofollow" />
+                <link rel="canonical" href="https://wilmothtechnologyservices.com/contact-received" />
+            </Helmet>
             {/* Header Section */}
             <div className="relative w-full">
                 <div className="absolute left-1/2 -translate-x-1/2" style={{ width: '150%' }}>
