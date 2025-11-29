@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://wilmothtechnologyservices.com/sitemap.xml
+
+# Disallow contact-received page (success page, no need to index)
+Disallow: /contact-received
+

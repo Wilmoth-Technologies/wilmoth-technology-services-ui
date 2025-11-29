@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { FaPhone, FaEnvelope, FaClock, FaMapMarkerAlt } from 'react-icons/fa';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -133,8 +134,44 @@ export default function Contact() {
         }
     };
 
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Us - Wilmoth Technology Services",
+        "description": "Get in touch with Wilmoth Technology Services to discuss your custom web application, website, IoT solution, or technology integration needs.",
+        "url": "https://wilmothtechnologyservices.com/contact",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Wilmoth Technology Services",
+            "telephone": "+1-336-244-6595",
+            "email": "info@wilmothtechnologyservices.com"
+        }
+    };
+
     return (
         <div className="min-h-screen pt-24 overflow-hidden">
+            <Helmet>
+                <title>Contact Us - Wilmoth Technology Services</title>
+                <meta name="description" content="Get in touch with Wilmoth Technology Services to discuss your custom web application, website, IoT solution, or technology integration needs. Call us at (336) 244-6595 or email info@wilmothtechnologyservices.com" />
+                <meta name="keywords" content="contact, web development, technology consulting, custom applications, IoT solutions, get quote, technology services" />
+                <link rel="canonical" href="https://wilmothtechnologyservices.com/contact" />
+                
+                {/* Open Graph */}
+                <meta property="og:title" content="Contact Us - Wilmoth Technology Services" />
+                <meta property="og:description" content="Get in touch with Wilmoth Technology Services to discuss your custom web application, website, IoT solution, or technology integration needs." />
+                <meta property="og:url" content="https://wilmothtechnologyservices.com/contact" />
+                <meta property="og:type" content="website" />
+                
+                {/* Twitter */}
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:title" content="Contact Us - Wilmoth Technology Services" />
+                <meta name="twitter:description" content="Get in touch with Wilmoth Technology Services to discuss your technology needs." />
+                
+                {/* Structured Data */}
+                <script type="application/ld+json">
+                    {JSON.stringify(structuredData)}
+                </script>
+            </Helmet>
             {/* Header Section - Adjusted circle size */}
             <div className="relative w-full">
                 <div className="absolute left-1/2 -translate-x-1/2" style={{ width: '150%' }}>

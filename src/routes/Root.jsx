@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import laptopMobileImage from '/LapTopAndMobile.png'
 // Import icons for services
 import { FaRocket, FaChartLine, FaGoogle, FaHourglassHalf, FaStar, FaClock } from 'react-icons/fa'
@@ -13,7 +14,7 @@ export default function Root() {
             title: "MOBILE FIRST DESIGN",
             description: "We prioritize the mobile experience first, ensuring your website looks and works beautifully on phones and tablets. This means your visitors get fast, smooth performance whether they're on the go or at their desk.",
             link: "Get Started",
-            href: "/#/contact"
+            href: "/contact"
         },
         {
             icon: <FaRocket className="w-12 h-12" />,
@@ -41,19 +42,77 @@ export default function Root() {
             title: "CROSS-PLATFORM SOLUTIONS",
             description: "We develop solutions that work across all platforms - from web and mobile applications to IoT devices and custom integrations. Our technology stack ensures consistent performance across your entire digital ecosystem.",
             link: "Get Started",
-            href: "/#/contact"
+            href: "/contact"
         },
         {
             icon: <FaClock className="w-12 h-12" />,
             title: "24/7 SUPPORT & MONITORING",
             description: "We provide round-the-clock monitoring and support for your digital infrastructure. Our dedicated team ensures your systems run smoothly, responding quickly to any issues and maintaining peak performance.",
             link: "Get Started",
-            href: "/#/contact"
+            href: "/contact"
         }
     ];
 
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Wilmoth Technology Services",
+        "description": "Custom web applications, websites, IoT solutions, and intelligent integrations that optimize workflow and maximize efficiency.",
+        "url": "https://wilmothtechnologyservices.com",
+        "logo": "https://wilmothtechnologyservices.com/WTSLogo.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-336-244-6595",
+            "contactType": "Customer Service",
+            "email": "info@wilmothtechnologyservices.com",
+            "areaServed": "US",
+            "availableLanguage": "English"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US"
+        },
+        "sameAs": [],
+        "serviceType": [
+            "Web Development",
+            "Mobile-First Design",
+            "SEO Services",
+            "Google PPC Ads",
+            "IoT Solutions",
+            "Custom Integrations"
+        ],
+        "areaServed": {
+            "@type": "Country",
+            "name": "United States"
+        }
+    };
+
     return (
         <>
+            <Helmet>
+                <title>Wilmoth Technology Services - Custom Web Applications & Technology Solutions</title>
+                <meta name="description" content="Transform your business with custom web applications, websites, IoT solutions, and intelligent integrations. We specialize in mobile-first design, optimized page speed, SEO services, and Google PPC ads. Serving clients nationwide with 24/7 support." />
+                <meta name="keywords" content="web development, custom web applications, IoT solutions, SEO services, Google PPC ads, mobile-first design, page speed optimization, technology consulting, business automation, custom integrations" />
+                <link rel="canonical" href="https://wilmothtechnologyservices.com/" />
+                
+                {/* Open Graph */}
+                <meta property="og:title" content="Wilmoth Technology Services - Custom Web Applications & Technology Solutions" />
+                <meta property="og:description" content="Transform your business with custom web applications, websites, IoT solutions, and intelligent integrations. We specialize in mobile-first design, optimized page speed, SEO services, and Google PPC ads." />
+                <meta property="og:url" content="https://wilmothtechnologyservices.com/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://wilmothtechnologyservices.com/WTSLogo.png" />
+                
+                {/* Twitter */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Wilmoth Technology Services - Custom Web Applications & Technology Solutions" />
+                <meta name="twitter:description" content="Transform your business with custom web applications, websites, IoT solutions, and intelligent integrations." />
+                <meta name="twitter:image" content="https://wilmothtechnologyservices.com/WTSLogo.png" />
+                
+                {/* Structured Data */}
+                <script type="application/ld+json">
+                    {JSON.stringify(structuredData)}
+                </script>
+            </Helmet>
             {/* Hero section with semi-circle background */}
             <div id="home-section" className="relative min-h-[80vh] lg:min-h-[75vh] overflow-hidden">
                 {/* Semi-circle background */}
@@ -76,7 +135,7 @@ export default function Root() {
                             {/* Button container - always in row */}
                             <div className="flex flex-row gap-4 justify-center lg:justify-start">
                                 <a 
-                                    href="#/contact" 
+                                    href="/contact" 
                                     className="bg-chartreuse text-olive-dark px-8 py-3 rounded-full font-bold hover:bg-chartreuse hover:opacity-70 transition-colors"
                                 >
                                     GET STARTED
@@ -166,7 +225,7 @@ export default function Root() {
                     {/* Call Us Today Button */}
                     <div className="flex justify-center mt-12">
                         <a 
-                            href="#/contact" 
+                                    href="/contact"
                             className="bg-olive-green text-white px-12 py-4 rounded-full font-bold hover:bg-opacity-90 transition-colors"
                             onClick={() => window.scrollTo(0, 0)}
                         >
@@ -313,11 +372,11 @@ export default function Root() {
 
                             <div className="flex justify-center">
                                 <a 
-                                    href="#/contact" 
+                                    href="/contact" 
                                     className="bg-chartreuse text-olive-dark px-8 py-4 rounded-full inline-block font-bold mt-8 hover:bg-chartreuse hover:opacity-70 transition-colors"
                                     onClick={(e) => {
                                         e.preventDefault();
-                                        window.location.href = '#/contact';
+                                        window.location.href = '/contact';
                                         window.scrollTo(0, 0);
                                     }}
                                 >

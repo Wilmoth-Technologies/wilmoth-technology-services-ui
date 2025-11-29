@@ -23,7 +23,7 @@ export default function Footer() {
                                     YOU ALWAYS WANTED?
                                 </h2>
                                 <a 
-                                    href="/#/contact" 
+                                    href="/contact" 
                                     onClick={() => window.scrollTo(0, 0)}
                                     className="bg-chartreuse text-olive-dark px-8 py-3 rounded-full font-bold hover:bg-chartreuse hover:opacity-70 transition-colors"
                                 >
@@ -73,7 +73,7 @@ export default function Footer() {
                             </p>
                             <div className="text-center">
                                 <a 
-                                    href="/#/contact" 
+                                    href="/contact" 
                                     onClick={() => window.scrollTo(0, 0)}
                                     className="bg-chartreuse text-olive-dark px-8 py-3 rounded-full font-bold hover:bg-chartreuse hover:opacity-70 transition-colors inline-block"
                                 >
@@ -97,7 +97,7 @@ export default function Footer() {
                                 </li>
                                 <li>
                                     <a 
-                                        href="/#/contact" 
+                                        href="/contact" 
                                         onClick={() => window.scrollTo(0, 0)} 
                                         className="hover:text-chartreuse"
                                     >

@@ -1,7 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import { createHashRouter, RouterProvider, Outlet } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import Root from "./routes/Root.jsx";
 import Contact from "./routes/Contact.jsx";
 import ContactReceived from "./routes/ContactReceived.jsx";
@@ -21,7 +22,7 @@ const Layout = () => {
   );
 };
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
@@ -45,8 +46,10 @@ const router = createHashRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}>
-      <ScrollToTop />
-    </RouterProvider>
+    <HelmetProvider>
+      <RouterProvider router={router}>
+        <ScrollToTop />
+      </RouterProvider>
+    </HelmetProvider>
   </StrictMode>,
 )
