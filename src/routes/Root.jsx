@@ -253,9 +253,9 @@ export default function Root() {
                 </div>
 
                 {/* Portfolio Grid */}
-                <div className="flex justify-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
                     {/* Mayberry Mini Trucks */}
-                    <div className="flex flex-col gap-3 max-w-lg">
+                    <div className="flex flex-col gap-3 h-full">
                         <div className="relative">
                             <img 
                                 src="/MayberryMiniTrucksPortfolio.png" 
@@ -263,14 +263,41 @@ export default function Root() {
                                 className="w-full rounded-lg"
                             />
                         </div>
-                        <div>
+                        <div className="flex flex-col flex-grow">
                             <h3 className="text-2xl font-bold mb-2">MAYBERRY MINI TRUCKS</h3>
-                            <p className="text-gray-700 mb-6">
+                            <p className="text-gray-700 mb-6 flex-grow">
                                 Mayberry Mini Trucks started as a small family-owned business in 2010. Through the years of growth, we are still just as passionate about providing quality, cost effective mini trucks for our customers. We take pride in providing our customers with top notch service as we bring them through the process of finding their mini truck with ease, so they can have the best experience possible.
                             </p>
-                            <div className="flex justify-center">
+                            <div className="flex justify-center mt-auto">
                                 <a 
                                     href="https://mayberryminitrucks.com/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="bg-olive-green text-white px-8 py-3 rounded-full inline-block font-bold hover:bg-opacity-90 transition-colors"
+                                >
+                                    VISIT WEBSITE
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Davis HVAC */}
+                    <div className="flex flex-col gap-3 h-full">
+                        <div className="relative">
+                            <img 
+                                src="/DavisHVAC-Portfolio.png" 
+                                alt="Davis HVAC website" 
+                                className="w-full rounded-lg"
+                            />
+                        </div>
+                        <div className="flex flex-col flex-grow">
+                            <h3 className="text-2xl font-bold mb-2">DAVIS HVAC</h3>
+                            <p className="text-gray-700 mb-6 flex-grow">
+                                Professional HVAC services website featuring expert installation, maintenance, and service of high-efficiency heating and cooling systems. The site showcases smart thermostats, indoor air quality solutions, and serves the Piedmont Triad area with a modern, mobile-first design that makes scheduling service easy for customers.
+                            </p>
+                            <div className="flex justify-center mt-auto">
+                                <a 
+                                    href="https://www.staycoolstaycozy.com/" 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
                                     className="bg-olive-green text-white px-8 py-3 rounded-full inline-block font-bold hover:bg-opacity-90 transition-colors"
